@@ -42,7 +42,7 @@ public class Main
             } else if (choice.equals("0")) {break;}
         }
         DoublyLinkedList list = new DoublyLinkedList();
-        System.out.println("\n--- Step 2: Moving elements to List ---");
+        System.out.println("\nMoving elements to List ");
         while (!stack.isEmpty())
         {
             int num = stack.pop();
@@ -65,8 +65,6 @@ public class Main
 
         }
 
-        // 4. Final output
-        System.out.println("\n--- Final Results ---");
         stack.display();
         list.printList();
         while (true)
@@ -97,7 +95,7 @@ public class Main
                 } catch (NumberFormatException e) {System.out.println("error, must be integer");}
             } else if (choice.equals("2"))
             {
-                System.out.print("Enter Hex value to remove: ");
+                System.out.print("Enter value to remove: ");
                 String hexToRemove = input.nextLine().toUpperCase();
                 if (list.remove(hexToRemove)) {System.out.println("Value " + hexToRemove + " removed.");}
                 else {System.out.println("Value not found in list.");}
@@ -210,7 +208,7 @@ class DoublyLinkedList
             return;
         }
         Node current = head;
-        System.out.print("List (Hex): ");
+        System.out.print("List: ");
         while (current != null)
         {
             System.out.print(current.data + " ");
